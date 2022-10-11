@@ -43,16 +43,16 @@ const updateRegistration = asyncHandler(async (req, res) => {
     throw new Error("record not found");
   }
 
-  const user = await User.findById(req.user.id);
+  //const user = await User.findById(req.user.id);
 
   //check for user
-  if (!user) {
+  if (!req.user) {
     res.status(401);
     throw new Error("User not found");
   }
 
   //make sure the login user matches the reg user
-  if (reg.user.toString() !== user.id) {
+  if (reg.user.toString() !== req.user.id) {
     res.status(401);
     throw new Error("user not authorized");
   }
@@ -78,16 +78,16 @@ const deleteRegistration = asyncHandler(async (req, res) => {
     throw new Error("record not found");
   }
 
-  const user = await User.findById(req.user.id);
+  //const user = await User.findById(req.user.id);
 
   //check for user
-  if (!user) {
+  if (!req.user) {
     res.status(401);
     throw new Error("User not found");
   }
 
   //make sure the logged in  user matches the reg user
-  if (reg.user.toString() !== user.id) {
+  if (reg.user.toString() !== req.user.id) {
     res.status(401);
     throw new Error("user not authorized");
   }
