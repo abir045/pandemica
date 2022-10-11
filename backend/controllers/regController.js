@@ -1,13 +1,14 @@
 const asyncHandler = require("express-async-handler");
 
 const Registration = require("../models/regModel");
+const User = require("../models/userModel");
 
 /// @desc get registration
 // @route GET /api/registartion
 // @access Private
 
 const getRegistration = asyncHandler(async (req, res) => {
-  const registrations = await Registration.find();
+  const registrations = await Registration.find({ user: req.user.id });
 
   res.status(200).json(registrations);
 });
@@ -17,13 +18,14 @@ const getRegistration = asyncHandler(async (req, res) => {
 // @access Private
 
 const setRegistration = asyncHandler(async (req, res) => {
-  if (!req.body.name) {
+  if (!req.body.text) {
     res.status(400);
     throw new Error("Please add a text field");
   }
 
   const reg = await Registration.create({
-    name: req.body.name,
+    text: req.body.text,
+    user: req.user.id,
   });
 
   res.status(200).json(reg);
@@ -39,6 +41,20 @@ const updateRegistration = asyncHandler(async (req, res) => {
   if (!reg) {
     res.status(400);
     throw new Error("record not found");
+  }
+
+  const user = await User.findById(req.user.id);
+
+  //check for user
+  if (!user) {
+    res.status(401);
+    throw new Error("User not found");
+  }
+
+  //make sure the login user matches the reg user
+  if (reg.user.toString() !== user.id) {
+    res.status(401);
+    throw new Error("user not authorized");
   }
 
   const updatedReg = await Registration.findByIdAndUpdate(
@@ -60,6 +76,20 @@ const deleteRegistration = asyncHandler(async (req, res) => {
   if (!reg) {
     res.status(400);
     throw new Error("record not found");
+  }
+
+  const user = await User.findById(req.user.id);
+
+  //check for user
+  if (!user) {
+    res.status(401);
+    throw new Error("User not found");
+  }
+
+  //make sure the logged in  user matches the reg user
+  if (reg.user.toString() !== user.id) {
+    res.status(401);
+    throw new Error("user not authorized");
   }
 
   await reg.remove();

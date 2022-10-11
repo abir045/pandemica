@@ -2,9 +2,14 @@ const mongoose = require("mongoose");
 
 const regSchema = mongoose.Schema(
   {
-    name: {
+    user: {
+      type: mongoose.Schema.Types.ObjectId,
+      required: true,
+      ref: "User",
+    },
+    text: {
       type: String,
-      required: [true, "please add fullname"],
+      required: [true, "please add text "],
     },
   },
 

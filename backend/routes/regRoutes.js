@@ -9,12 +9,14 @@ const {
   deleteRegistration,
 } = require("../controllers/regController");
 
-router.get("/", getRegistration);
+const { protect } = require("../middleware/authMiddleware");
 
-router.post("/", setRegistration);
+router.get("/", protect, getRegistration);
 
-router.put("/:id", updateRegistration);
+router.post("/", protect, setRegistration);
 
-router.delete("/:id", deleteRegistration);
+router.put("/:id", protect, updateRegistration);
+
+router.delete("/:id", protect, deleteRegistration);
 
 module.exports = router;
