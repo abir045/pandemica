@@ -4,4 +4,4 @@ This project was built with React JS, Redux tool kit and Tailwind CSS, and mongo
 
 ## Screen Shot
 
-![desktop](./src/images/desktop.png)
+![](./src/images/desktop.png)
