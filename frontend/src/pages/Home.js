@@ -140,7 +140,7 @@ const Home = () => {
       <div className="flex items-center  space-x-[5%] mx-[10%] mt-[5%]  ">
         {/* wear a mask */}
 
-        <div className="flex flex-col w-full items-center bg-white rounded-[25px] shadow-[0px_0px_44px_-5px_rgba(102,102,102,0.1)]">
+        <div className="flex flex-col w-full items-center bg-white rounded-[25px] shadow-[0px_0px_44px_-5px_rgba(102,102,102,0.1)] pb-[5%]">
           <img className="mb-[5%]" src={mask} />
           <h5 className="text-[20px] leading-[32px] text-center font-semibold ">
             Wear a mask
@@ -153,7 +153,7 @@ const Home = () => {
         </div>
         {/* wash your hands often */}
 
-        <div className="flex flex-col w-full items-center bg-white rounded-[25px] shadow-[0px_0px_44px_-5px_rgba(102,102,102,0.1)]">
+        <div className="flex flex-col w-full items-center bg-white rounded-[25px] shadow-[0px_0px_44px_-5px_rgba(102,102,102,0.1)] pb-[5%]">
           <img className="mb-[5%]" src={homecare} />
           <h5 className="text-[20px] leading-[32px] text-center font-semibold">
             Wash your hands often
@@ -166,7 +166,7 @@ const Home = () => {
         </div>
         {/* physical distancing */}
 
-        <div className="flex flex-col w-full items-center bg-white rounded-[25px] shadow-[0px_0px_44px_-5px_rgba(102,102,102,0.1)]">
+        <div className="flex flex-col w-full items-center bg-white rounded-[25px] shadow-[0px_0px_44px_-5px_rgba(102,102,102,0.1)] pb-[5%]">
           <img className="mb-[5%]" src={distancing} />
           <h5 className="text-[20px] leading-[32px] text-center font-semibold">
             Physical distancing
@@ -226,7 +226,7 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="flex space-x-3">
+          <div className="flex space-x-3 mb-[5%]">
             <img src={phn} />
             <div className="flex flex-col space-y-3">
               <p className="text-[18px] leading-[22px] font-medium uppercase text-[#555555]">
