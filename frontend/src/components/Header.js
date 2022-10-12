@@ -17,31 +17,37 @@ const Header = () => {
 
   return (
     <div className="flex justify-around p-5 items-center">
-      <h1>Pandemica</h1>
-      <div className="flex">
+      <h1 className="flex text-2xl text-[#44B564] font-bold">Pandemica.</h1>
+      {/* <div className="flex">
         <Link to="/">Financial asistance</Link>
-      </div>
-      <ul className="flex space-x-5">
+      </div> */}
+      <ul className="flex  space-x-5">
         {user ? (
-          <li>
-            <button className="bg-black text-white flex" onClick={onLogout}>
+          <li className="flex">
+            <button className="flex  items-center space-x-3" onClick={onLogout}>
               <FaSignOutAlt />
-              Logout
+              <p className="text-base font-bold">Logout</p>
             </button>
           </li>
         ) : (
           <>
-            <li>
-              <Link to="/login">
+            <li className="flex items-center">
+              <Link className="flex space-x-3 items-center" to="/login">
                 <FaSignInAlt />
-                Login
+                <p className="font-bold text-base">Login</p>
               </Link>
             </li>
 
-            <li>
-              <Link to="/register">
+            <li className="flex items-center">
+              <Link className="flex space-x-3 items-center" to="/register">
                 <FaUser />
-                Register
+                <p className="font-bold text-base">Register</p>
+              </Link>
+            </li>
+            <li className="flex items-center">
+              <Link className="flex space-x-3 items-center" to="/dashboard">
+                <FaUser />
+                <p className="font-bold text-base">Dashboard</p>
               </Link>
             </li>
           </>
