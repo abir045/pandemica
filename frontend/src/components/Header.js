@@ -17,7 +17,9 @@ const Header = () => {
 
   return (
     <div className="flex justify-around p-5 items-center">
-      <h1 className="flex text-2xl text-[#44B564] font-bold">Pandemica.</h1>
+      <h1 className="flex text-2xl text-[#44B564] font-bold cursor-pointer">
+        <a href="/">Pandemica.</a>
+      </h1>
       {/* <div className="flex">
         <Link to="/">Financial asistance</Link>
       </div> */}
@@ -45,14 +47,18 @@ const Header = () => {
             <li className="flex items-center">
               <Link className="flex space-x-3 items-center" to="/login">
                 <FaSignInAlt />
-                <p className="font-bold text-base">Login</p>
+                <p className="font-bold text-base hover:text-[#44B564]">
+                  Login
+                </p>
               </Link>
             </li>
 
             <li className="flex items-center">
               <Link className="flex space-x-3 items-center" to="/register">
                 <FaUser />
-                <p className="font-bold text-base">Register</p>
+                <p className="font-bold text-base hover:text-[#44B564]">
+                  Register
+                </p>
               </Link>
             </li>
             {/* <li className="flex items-center">

@@ -63,52 +63,52 @@ const Register = () => {
 
   return (
     <div>
-      <section className="flex space-x-5 mx-[10%] items-center">
+      <section className="flex space-x-5 mx-[10%] items-center mt-[10%]">
         <FaUser size={30} />
         <h1 className="text-3xl font-bold">
           Register for a positive antigen test
         </h1>
       </section>
-      <section className="mb-[35%]">
+      <section className="mb-[35%] ">
         <form className="flex flex-col mx-[10%] " onSubmit={onSubmit}>
           <input
-            className="my-5"
+            className="my-5 px-5 py-2 rounded"
             type="text"
             id="name"
             name="name"
             value={name}
-            placeholder="Enter your name"
+            placeholder="Enter your name..."
             onChange={onChange}
           />
           <input
-            className="my-5"
+            className="my-5 px-5 py-2 rounded"
             type="email"
             id="email"
             name="email"
             value={email}
-            placeholder="Enter your email"
+            placeholder="Enter your email..."
             onChange={onChange}
           />
           <input
-            className="my-5"
+            className="my-5 px-5 py-2 rounded"
             type="password"
             id="password"
             name="password"
             value={password}
-            placeholder="Enter your password"
+            placeholder="Enter your password..."
             onChange={onChange}
           />
           <input
-            className="my-5"
+            className="my-5 px-5 py-2 rounded"
             type="password"
             id="password2"
             name="password2"
             value={password2}
-            placeholder="Confirm your password"
+            placeholder="Confirm your password..."
             onChange={onChange}
           />
 
-          <button className="flex bg-black text-white text-center justify-center p-2 w-full rounded-xl">
+          <button className="flex bg-[#44B564] text-white  hover:text-[#44B564] hover:bg-white text-center justify-center p-2 w-full rounded-xl">
             Submit
           </button>
         </form>

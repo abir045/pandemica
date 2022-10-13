@@ -34,8 +34,8 @@ const Home = () => {
             discover what you need.
           </p>
 
-          <button className="flex mt-10 bg-[#44B564] justify-center p-2 rounded-full  w-[30%]">
-            <p className="text-white text-center font-medium text-[24px]">
+          <button className="flex mt-10 bg-[#44B564] hover:bg-white justify-center p-2 rounded-full  w-[30%]">
+            <p className="text-white text-center font-medium text-[24px]  hover:text-[#44B564]">
               Let us help
             </p>
           </button>

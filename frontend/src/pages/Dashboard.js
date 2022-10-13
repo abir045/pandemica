@@ -1,18 +1,38 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import RequestForm from "../components/RequestForm";
+import { getRequests } from "../features/assistance/financialSlice";
+import { reset } from "../features/auth/authSlice";
 
 const Dashboard = () => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const { user } = useSelector((state) => state.auth);
+  const { requests, isLading, isError, message } = useSelector(
+    (state) => state.requests
+  );
 
   useEffect(() => {
+    if (isError) {
+      console.log(message);
+    }
+
     if (!user) {
       navigate("/login");
     }
-  }, [user, navigate]);
+
+    dispatch(getRequests());
+
+    return () => {
+      dispatch(reset);
+    };
+  }, [user, navigate, dispatch]);
+
+  if (isLading) {
+    return <h1>...is Loading</h1>;
+  }
 
   return (
     <div>

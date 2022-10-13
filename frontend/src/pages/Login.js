@@ -53,16 +53,16 @@ const Login = () => {
 
   return (
     <div>
-      <section className="flex space-x-5 mx-[10%] items-center">
+      <section className="flex space-x-5 mx-[10%] mt-[10%] items-center">
         <FaSignInAlt size={30} />
         <h1 className="text-3xl font-bold">
           Login and apply for financial assistance
         </h1>
       </section>
-      <section className="mb-[35%]">
+      <section className="mb-[35%] mt-5">
         <form className="flex flex-col mx-[10%] " onSubmit={onSubmit}>
           <input
-            className="my-5"
+            className="my-5 px-5 py-2 rounded"
             type="email"
             id="email"
             name="email"
@@ -71,7 +71,7 @@ const Login = () => {
             onChange={onChange}
           />
           <input
-            className="my-5"
+            className="my-5 px-5 py-2 rounded"
             type="password"
             id="password"
             name="password"
@@ -80,7 +80,7 @@ const Login = () => {
             onChange={onChange}
           />
 
-          <button className="flex bg-black text-white text-center justify-center p-2 w-full rounded-xl">
+          <button className="flex bg-[#44B564] text-white text-center justify-center p-2 w-full rounded-xl hover:text-[#44B564] hover:bg-white">
             Submit
           </button>
         </form>

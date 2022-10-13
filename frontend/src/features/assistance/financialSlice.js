@@ -73,6 +73,21 @@ export const requestSlice = createSlice({
         state.isError = true;
         // rejects with a message
         state.message = action.payload;
+      })
+      .addCase(getRequests.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(getRequests.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.isSuccess = true;
+        // add request to the requests array from the api
+        state.requests = action.payload;
+      })
+      .addCase(getRequests.rejected, (state, action) => {
+        state.isLoading = false;
+        state.isError = true;
+        // rejects with a message
+        state.message = action.payload;
       });
   },
 });
