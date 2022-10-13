@@ -16,11 +16,11 @@ const RequestForm = () => {
 
   return (
     <div>
-      <section className="flex flex-col items-center mt-[5%] mb-[55%]">
+      <section className="flex flex-col items-center mt-[5%] mb-[55%] w-full">
         <form onSubmit={onSubmit}>
-          <div className="flex flex-col space-y-5">
+          <div className="flex flex-col space-y-5 ">
             <label htmlFor="text" className="font-bold text-2xl">
-              Request
+              Submit your Request in detail for financial assistance
             </label>
             <input
               type="text"
@@ -28,11 +28,11 @@ const RequestForm = () => {
               id="text"
               value={text}
               onChange={(e) => setText(e.target.value)}
-              placeholder="Enter your Request"
+              placeholder="Enter your Request..."
             />
           </div>
           <button
-            className="bg-black text-white p-1 rounded w-full mt-[10%]"
+            className="bg-[#44B564] font-bold text-white p-2 hover:text-[#44B564] hover:bg-white rounded w-full mt-[10%]"
             type="submit"
           >
             Add Request
