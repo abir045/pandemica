@@ -226,7 +226,7 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="flex space-x-3 mb-[5%]">
+          <div className="flex space-x-3">
             <img src={phn} />
             <div className="flex flex-col space-y-3">
               <p className="text-[18px] leading-[22px] font-medium uppercase text-[#555555]">

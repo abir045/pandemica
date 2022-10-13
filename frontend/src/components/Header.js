@@ -23,12 +23,23 @@ const Header = () => {
       </div> */}
       <ul className="flex  space-x-5">
         {user ? (
-          <li className="flex">
-            <button className="flex  items-center space-x-3" onClick={onLogout}>
-              <FaSignOutAlt />
-              <p className="text-base font-bold">Logout</p>
-            </button>
-          </li>
+          <>
+            <li className="flex">
+              <button
+                className="flex  items-center space-x-3"
+                onClick={onLogout}
+              >
+                <FaSignOutAlt />
+                <p className="text-base font-bold">Logout</p>
+              </button>
+            </li>
+            <li className="flex items-center">
+              <Link className="flex space-x-3 items-center" to="/dashboard">
+                <FaUser />
+                <p className="font-bold text-base">Dashboard</p>
+              </Link>
+            </li>
+          </>
         ) : (
           <>
             <li className="flex items-center">
@@ -44,12 +55,12 @@ const Header = () => {
                 <p className="font-bold text-base">Register</p>
               </Link>
             </li>
-            <li className="flex items-center">
+            {/* <li className="flex items-center">
               <Link className="flex space-x-3 items-center" to="/dashboard">
                 <FaUser />
                 <p className="font-bold text-base">Dashboard</p>
               </Link>
-            </li>
+            </li> */}
           </>
         )}
       </ul>

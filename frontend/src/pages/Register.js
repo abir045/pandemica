@@ -69,7 +69,7 @@ const Register = () => {
           Register for a positive antigen test
         </h1>
       </section>
-      <section>
+      <section className="mb-[35%]">
         <form className="flex flex-col mx-[10%] " onSubmit={onSubmit}>
           <input
             className="my-5"
