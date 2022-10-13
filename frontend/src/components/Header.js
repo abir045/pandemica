@@ -32,13 +32,17 @@ const Header = () => {
                 onClick={onLogout}
               >
                 <FaSignOutAlt />
-                <p className="text-base font-bold">Logout</p>
+                <p className="text-base font-bold hover:text-[#44B564]">
+                  Logout
+                </p>
               </button>
             </li>
             <li className="flex items-center">
               <Link className="flex space-x-3 items-center" to="/dashboard">
                 <FaUser />
-                <p className="font-bold text-base">Dashboard</p>
+                <p className="font-bold text-base hover:text-[#44B564]">
+                  Dashboard
+                </p>
               </Link>
             </li>
           </>
