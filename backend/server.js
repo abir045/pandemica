@@ -9,7 +9,7 @@ const connectDB = require("./config/db");
 
 connectDB();
 
-const port = process.env.port || 5000;
+const port = process.env.port || "5000";
 
 const app = express();
 
