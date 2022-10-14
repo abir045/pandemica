@@ -1,6 +1,7 @@
 {
   "name": "mern",
   "version": "1.0.0",
+  "engines" : { "node": "16.17.1"},
   "description": "pandemica",
   "main": "server.js",
   "scripts": {
