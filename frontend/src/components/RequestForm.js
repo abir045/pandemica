@@ -16,7 +16,7 @@ const RequestForm = () => {
 
   return (
     <div>
-      <section className="flex flex-col items-center mt-[5%] mb-[55%] w-full">
+      <section className="flex flex-col items-center mt-[5%] mb-[5%] w-full">
         <form onSubmit={onSubmit}>
           <div className="flex flex-col space-y-5 ">
             <label htmlFor="text" className="font-bold text-2xl">

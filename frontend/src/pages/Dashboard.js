@@ -4,13 +4,14 @@ import { useSelector, useDispatch } from "react-redux";
 import RequestForm from "../components/RequestForm";
 import { getRequests } from "../features/assistance/financialSlice";
 import { reset } from "../features/auth/authSlice";
+import RequestItem from "../components/RequestItem";
 
 const Dashboard = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const { user } = useSelector((state) => state.auth);
-  const { requests, isLading, isError, message } = useSelector(
+  const { requests, isLoading, isError, message } = useSelector(
     (state) => state.requests
   );
 
@@ -26,26 +27,39 @@ const Dashboard = () => {
     dispatch(getRequests());
 
     return () => {
-      dispatch(reset);
+      dispatch(reset());
     };
-  }, [user, navigate, dispatch]);
+  }, [user, dispatch, navigate]);
 
-  if (isLading) {
+  if (isLoading) {
     return <h1>...is Loading</h1>;
   }
+
+  console.log(requests);
 
   return (
     <div>
       <section className="flex flex-col space-y-5 items-center mt-[10%] ">
         <h1 className="flex font-bold text-4xl ">
-          Welcome {user && user.name} you have registered for a positive antigen
-          test result
+          Welcome {user && user.name}, <br /> you have registered for a positive
+          antigen test result
         </h1>
         <p className="flex font-bold text-3xl">
           Financial Assistance Dahsboard{" "}
         </p>
       </section>
       <RequestForm />
+      <section className="flex flex-col ">
+        {requests.length > 0 ? (
+          <div>
+            {requests.map((request) => {
+              return <RequestItem key={request._id} request={request} />;
+            })}
+          </div>
+        ) : (
+          <h3>You have not sent any request</h3>
+        )}
+      </section>
     </div>
   );
 };
