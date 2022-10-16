@@ -14,27 +14,27 @@ import phn from "../images/phn.svg";
 const Home = () => {
   return (
     <div>
-      <div className="flex  mx-[10%] mt-[5%] justify-around">
+      <div className="flex flex-col-reverse lg:flex-row  mx-[10%] mt-[5%] justify-around">
         {/* left banner */}
         <div className="flex flex-col">
-          <div className="flex items-center space-x-1 text-[#ff0000] uppercase">
+          <div className="flex items-center space-x-1 text-[#ff0000] uppercase mt-5">
             <img src={alert} />
             <h5 className="font-medium text-lg tracking-[0.02em]">
               covid-19 alert
             </h5>
           </div>
 
-          <h1 className="text-[42px] tracking-[0.01em] font-bold leading-[56px] w-[65%]">
+          <h1 className="text-4xl lg:text-[42px] tracking-[0.01em] font-bold leading-[56px] w-[65%]">
             Together we fight COVID-19
           </h1>
 
-          <p className="text-[22px] text-[#333333] opacity-60 w-[50%] mt-5">
+          <p className="text-xl lg:text-[22px] text-[#333333] opacity-60 w-[90%] lg:w-[50%] mt-5">
             Pandemica is a platform to fight against covid-19. We offer
             different services and assistance. Go through our platform and
             discover what you need.
           </p>
 
-          <button className="flex mt-10 bg-[#44B564] hover:bg-white justify-center p-2 rounded-full  w-[30%]">
+          <button className="flex mt-10 bg-[#44B564] hover:bg-white justify-center p-2 rounded-full  lg:w-[30%]">
             <p className="text-white text-center font-medium text-[24px]  hover:text-[#44B564]">
               Let us help
             </p>
@@ -47,7 +47,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="flex mx-[10%] mt-[10%] space-x-10">
+      <div className="flex flex-col lg:flex-row mx-[10%] mt-[10%] space-x-10">
         {/* left image */}
         <div className="flex flex-col w-full">
           <img src={world} />
@@ -55,13 +55,13 @@ const Home = () => {
 
         {/* right section */}
 
-        <div className="flex flex-col space-y-5">
+        <div className="flex flex-col space-y-5 mt-[10%] lg:mt-0">
           <h2 className="text-[36px] leading-[40px] tracking-[0.02em] font-semibold text-[#333333]">
             What we do?
           </h2>
           <hr className="border-[3px] border-[#64cf83] border-solid  w-[30%]" />
 
-          <p className="text-[20px] font-medium leading-[32px] w-full">
+          <p className="text-lg lg:text-[20px] font-medium leading-[32px] w-full">
             Covid 19 positive or Pneumonitis patient will be treated at home as
             per doctor order by GNC certified nursing staff. We offer different
             services which are listed below
@@ -69,55 +69,55 @@ const Home = () => {
 
           <div className="flex space-x-3">
             <img src={virus} />
-            <p className="text-[20px] font-medium leading-[32px]">
+            <p className="text-lg lg:text-[20px] font-medium leading-[32px]">
               Contact Tracing
             </p>
           </div>
 
           <div className="flex space-x-3">
             <img src={virus} />
-            <p className="text-[20px] font-medium leading-[32px]">
+            <p className="text-lg lg:text-[20px] font-medium leading-[32px]">
               Vaccine Rollout{" "}
             </p>
           </div>
 
           <div className="flex space-x-3">
             <img src={virus} />
-            <p className="text-[20px] font-medium leading-[32px]">
+            <p className="text-lg lg:text-[20px] font-medium leading-[32px]">
               Vaccine Certification
             </p>
           </div>
 
           <div className="flex space-x-3">
             <img src={virus} />
-            <p className="text-[20px] font-medium leading-[32px]">
+            <p className="text-lg lg:text-[20px] font-medium leading-[32px]">
               QR code Check-in
             </p>
           </div>
           <div className="flex space-x-3">
             <img src={virus} />
-            <p className="text-[20px] font-medium leading-[32px]">
+            <p className="text-lg lg:text-[20px] font-medium leading-[32px]">
               Quarantines
             </p>
           </div>
           <div className="flex space-x-3">
             <img src={virus} />
-            <p className="text-[20px] font-medium leading-[32px]">
+            <p className="text-lg lg:text-[20px] font-medium leading-[32px]">
               PCR Testing
             </p>
           </div>
 
           <div className="flex space-x-3">
             <img src={virus} />
-            <p className="text-[20px] font-medium leading-[32px]">
+            <p className="text-lg lg:text-[20px] font-medium leading-[32px]">
               Registering for a positive rapid antigen test result.
             </p>
           </div>
 
           <div className="flex space-x-3">
             <img src={virus} />
-            <p className="text-[20px] font-medium leading-[32px]">
-              financial assistances
+            <p className="text-lg lg:text-[20px] font-medium leading-[32px]">
+              Financial assistances
             </p>
           </div>
           {/* quarantines */}
@@ -129,7 +129,7 @@ const Home = () => {
           Prevention
         </h3>
         <hr className="border-[3px] border-[#64cf83] mt-5 mx-auto  border-solid  w-[10%]" />
-        <p className="text-[20px] font-medium leading-[32px] tracking-[0.02em] text-center mt-[5%] mx-[10%]">
+        <p className="text-lg lg:text-[20px] font-medium leading-[32px] tracking-[0.02em] text-center mt-[5%] lg:mx-[10%]">
           Protect yourself and others around you by knowing the facts and taking
           appropriate precautions. Floow advice provided by your local health
           authority.
@@ -137,7 +137,7 @@ const Home = () => {
       </div>
 
       {/* prevention portal */}
-      <div className="flex items-center  space-x-[5%] mx-[10%] mt-[5%]  ">
+      <div className="flex flex-col space-y-5 lg:flex-row items-center  space-x-[5%] mx-[10%] mt-[5%]  ">
         {/* wear a mask */}
 
         <div className="flex flex-col w-full items-center bg-white rounded-[25px] shadow-[0px_0px_44px_-5px_rgba(102,102,102,0.1)] pb-[5%]">
@@ -187,12 +187,12 @@ const Home = () => {
         </h3>
         <hr className="border-[3px] border-[#64cf83] mt-5 mx-auto  border-solid  w-[10%]" />
 
-        <p className="text-[20px] mt-10 font-medium leading-[32px] text-center tracking-[0.02em] text-[#777777] mx-[20%]">
+        <p className="text-lg lg:text-[20px] mt-10 font-medium leading-[32px] text-center tracking-[0.02em] text-[#777777] mx-[20%]">
           COVID-19 affects different people in different ways. Most infected
           people will develop mild to moderate illness and recover without
           hospitalization.
         </p>
-        <div className="flex w-full justify-center mt-[5%]">
+        <div className="flex flex-col lg:flex-row w-full justify-center mt-[5%]">
           <img className="flex" src={logo} />
           <img className="flex " src={symptoms} />
         </div>
@@ -206,33 +206,33 @@ const Home = () => {
 
         <hr className="border-[3px] border-[#64cf83] mt-5 mx-auto  border-solid  w-[10%]" />
 
-        <p className="flex text-[20px] leading-[32px] font-medium mt-10 text-center mx-[20%]">
+        <p className="flex text-base lg:text-[20px] leading-[32px] font-medium mt-10 text-center lg:mx-[20%]">
           Protect yourself and others around you by knowing the facts and taking
           appropriate precautions. Floow advice provided by your local health
           authority.
         </p>
         <img className="mt-[5%]" src={pana} />
 
-        <div className="flex flex-col space-y-10">
+        <div className="flex flex-col space-y-10 mx-[5%] lg:mx-0">
           <div className="flex space-x-3 mt-[15%]">
             <img src={phn} />
             <div className="flex flex-col space-y-3">
-              <p className="text-[18px] leading-[22px] font-medium uppercase text-[#555555]">
+              <p className="lg:text-[18px] leading-[22px] font-medium uppercase text-[#555555]">
                 National Coronavirus Health Information Line
               </p>
-              <p className="text-[18px] leading-[22px] font-medium uppercase text-[#555555]">
+              <p className="lg:text-[18px] leading-[22px] font-medium uppercase text-[#555555]">
                 (+61) 1800 020 080.
               </p>
             </div>
           </div>
 
-          <div className="flex space-x-3">
+          <div className="flex space-x-3 mx-[5%] lg:mx-0">
             <img src={phn} />
             <div className="flex flex-col space-y-3">
-              <p className="text-[18px] leading-[22px] font-medium uppercase text-[#555555]">
+              <p className="lg:text-[18px] leading-[22px] font-medium uppercase text-[#555555]">
                 Service NSW
               </p>
-              <p className="text-[18px] leading-[22px] font-medium uppercase text-[#555555]">
+              <p className="lg:text-[18px] leading-[22px] font-medium uppercase text-[#555555]">
                 (+61) 137788
               </p>
             </div>

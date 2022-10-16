@@ -65,7 +65,7 @@ const Register = () => {
     <div>
       <section className="flex space-x-5 mx-[10%] items-center mt-[10%]">
         <FaUser size={30} />
-        <h1 className="text-3xl font-bold">
+        <h1 className="text-2xl lg:text-3xl font-bold">
           Register for a positive antigen test
         </h1>
       </section>

@@ -18,11 +18,12 @@ const RequestForm = () => {
     <div>
       <section className="flex flex-col items-center mt-[5%] mb-[5%] w-full">
         <form onSubmit={onSubmit}>
-          <div className="flex flex-col space-y-5 ">
-            <label htmlFor="text" className="font-bold text-2xl">
+          <div className="flex flex-col space-y-5 mx-[5%] lg:mx-0 ">
+            <label htmlFor="text" className="font-bold text-lg  lg:text-2xl">
               Submit your Request in detail for financial assistance
             </label>
             <input
+              className="my-5 px-5 py-2 rounded "
               type="text"
               name="text"
               id="text"
@@ -32,7 +33,7 @@ const RequestForm = () => {
             />
           </div>
           <button
-            className="bg-[#44B564] font-bold text-white p-2 hover:text-[#44B564] hover:bg-white rounded w-full mt-[10%]"
+            className="bg-[#44B564] font-bold text-white p-2 hover:text-[#44B564] hover:bg-white rounded lg:mx-0  mx-[5%] w-[90%] lg:w-full mt-[10%]"
             type="submit"
           >
             Add Request

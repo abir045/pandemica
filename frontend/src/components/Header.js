@@ -16,8 +16,8 @@ const Header = () => {
   };
 
   return (
-    <div className="flex justify-around p-5 items-center">
-      <h1 className="flex text-2xl text-[#44B564] font-bold cursor-pointer">
+    <div className="flex  justify-between lg:justify-around p-5 items-center">
+      <h1 className="flex lg:text-2xl text-[#44B564] font-bold cursor-pointer ">
         <a href="/">Pandemica.</a>
       </h1>
       {/* <div className="flex">

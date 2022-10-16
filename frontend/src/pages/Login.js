@@ -55,11 +55,11 @@ const Login = () => {
     <div>
       <section className="flex space-x-5 mx-[10%] mt-[10%] items-center">
         <FaSignInAlt size={30} />
-        <h1 className="text-3xl font-bold">
+        <h1 className="text-2xl lg:text-3xl font-bold">
           Login and apply for financial assistance
         </h1>
       </section>
-      <section className="mb-[35%] mt-5">
+      <section className="mb-[95%] lg:mb-[35%]  mt-5">
         <form className="flex flex-col mx-[10%] " onSubmit={onSubmit}>
           <input
             className="my-5 px-5 py-2 rounded"

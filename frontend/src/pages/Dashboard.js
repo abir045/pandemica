@@ -39,14 +39,15 @@ const Dashboard = () => {
 
   return (
     <div>
-      <section className="flex flex-col space-y-5 items-center mt-[10%] ">
-        <h1 className="flex font-bold text-4xl ">
+      <section className="flex flex-col space-y-5 items-center mt-[10%] mx-[5%] lg:mx-0">
+        <h1 className="flex font-semibold text-xl lg:text-4xl ">
           Welcome {user && user.name}, <br /> you have registered for a positive
           antigen test result
         </h1>
-        <p className="flex font-bold text-3xl">
+        <p className="flex font-bold text-[22px] lg:text-3xl">
           Financial Assistance Dahsboard{" "}
         </p>
+        <hr className="border-[3px] border-[#64cf83] mt-5 mx-auto  border-solid  w-[40%]" />
       </section>
       <RequestForm />
       <section className="flex flex-col ">
